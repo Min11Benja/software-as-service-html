@@ -76,3 +76,6 @@ h2 {
 .image-title h2 {
   background-color: #ebebebeb;
 }
+.vertical-carousel.right-side .section-img-inner {
+  left: auto;
+}
