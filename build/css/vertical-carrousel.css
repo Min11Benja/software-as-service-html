@@ -3,22 +3,17 @@ html {
 }
 .bg {
   background: #9b3636;
-  /*
-  position: fixed;
-  */
   position: sticky;
   top: 0;
   left: 0;
   width: 50%;
   height: 0;
-  z-index: 1;
 }
 
 .section {
   display: flex;
   min-height: 100vh;
   position: relative;
-  z-index: 2;
 }
 
 .section > * {
