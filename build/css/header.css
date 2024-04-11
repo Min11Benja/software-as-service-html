@@ -104,21 +104,24 @@ html {
 /* 02. Fonts - Create your own https://www.fontsquirrel.com/tools/webfont-generator */
 @font-face {
   font-family: "poppinslight";
-  src: url("../fonts/poppins-light-webfont.woff2") format("woff2"),
+  src:
+    url("../fonts/poppins-light-webfont.woff2") format("woff2"),
     url("../fonts/poppins-light-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "poppinsregular";
-  src: url("../fonts/poppins-regular-webfont.woff2") format("woff2"),
+  src:
+    url("../fonts/poppins-regular-webfont.woff2") format("woff2"),
     url("../fonts/poppins-regular-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "poppinssemibold";
-  src: url("../fonts/poppins-semibold-webfont.woff2") format("woff2"),
+  src:
+    url("../fonts/poppins-semibold-webfont.woff2") format("woff2"),
     url("../fonts/poppins-semibold-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
@@ -515,4 +518,76 @@ h2 {
     border-bottom-style: solid;
     border-bottom-color: #cdcfd1;
   }
+}
+
+/*HOVER*/
+/*________________________________________________ */
+
+.navigation {
+  display: -webkit-box;
+  display: flex;
+}
+
+.menu {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+}
+
+@media (width >= 768px) {
+  .menu {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: row;
+  }
+}
+
+@media (width >= 768px) {
+  .menu > li:not(:last-child) {
+    margin-right: 40px;
+  }
+}
+
+.menu a {
+  position: relative;
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 300;
+  color: #666;
+  -webkit-transition: color 0.2s ease;
+  transition: color 0.2s ease;
+}
+
+.menu a:hover {
+  color: #f44336;
+}
+
+.menu a:hover::after,
+.menu a:hover::before {
+  width: 100%;
+  left: 0;
+}
+
+.menu a::after,
+.menu a::before {
+  content: "";
+  position: absolute;
+  top: calc(100% + 5px);
+  width: 0;
+  right: 0;
+  height: 3px;
+}
+
+.menu a::before {
+  -webkit-transition: width 0.4s cubic-bezier(0.51, 0.18, 0, 0.88) 0.1s;
+  transition: width 0.4s cubic-bezier(0.51, 0.18, 0, 0.88) 0.1s;
+  background: #2196f3;
+}
+
+.menu a::after {
+  -webkit-transition: width 0.2s cubic-bezier(0.29, 0.18, 0.26, 0.83);
+  transition: width 0.2s cubic-bezier(0.29, 0.18, 0.26, 0.83);
+  background: #f44336;
 }
