@@ -20,6 +20,12 @@ html {
   width: 50%;
 }
 
+@media (max-width: 1279px) {
+  .section > * {
+    width: 100%;
+  }
+}
+
 .section-img {
   position: relative;
   display: flex;
@@ -42,6 +48,16 @@ html {
     0.6s ease,
     opacity 0.6s ease,
     background-position 0.8s ease;
+}
+
+@media (max-width: 1279px) {
+  .section-img-inner {
+    position: relative;
+    width: 100%;
+    height: 300px; /* Fixed height for image on mobile */
+    opacity: 1; /* Always visible or controlled by active? Let's keep opacity logic if possible, but 1 is safer for simple scroll */
+    filter: none;
+  }
 }
 .section-img-inner h1 {
   color: white;
