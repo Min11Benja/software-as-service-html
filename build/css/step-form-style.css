@@ -42,7 +42,8 @@ h2.fs-title {
   font-size: 25px;
 }
 .form {
-  width: 40em;
+  width: 100%;
+  max-width: 40em;
   margin: auto;
   margin-top: 5em;
   padding: 3em;
